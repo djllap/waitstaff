@@ -1,3 +1,46 @@
 * {
   box-sizing: border-box;
 }
+
+.content-box {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  justify-content: space-evenly;
+  min-height: 400px;
+}
+
+.meal-box {
+  width: 40%;
+}
+
+.column-right {
+  display: flex;
+  flex-direction: column;
+  width: 30%;
+  justify-content: space-between;
+}
+
+.customer-charges-box, .earnings-box {
+  min-height: 150px;
+}
+
+.box {
+  background-color: lightgrey;
+  border: 2px solid black;
+}
+
+h1 {
+  text-align: center;
+}
+
+.box-header {
+  margin-top: 8px;
+  padding-left: 10%;
+  border-bottom: 1px solid black;
+}
+
+h2 {
+  padding: 0;
+  margin: 0
+}
