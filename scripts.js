@@ -40,23 +40,21 @@ function generateMealDetails() {
 
 function generateCustomerCharges() {
   return `
-    <div class="customer-charges-box box">
-      <header class="charges-header box-header">
-        <h2>Customer Charges</h2>
-      </header>
-      <p class="subtotal">
-        <span class="charges-label">Subtotal: $</span>
-        <span class="charges-value">0.00</span>
-      </p>
-      <p class="tip">
-        <span class="charges-label">Tip: $</span>
-        <span class="charges-value">0.00</span>
-      </p>
-      <p class="charges-total">
-        <span class="charges-label">Total: $</span>
-        <span class="charges-value">0.00</span>
-      </p>
-    </div>
+    <header class="charges-header box-header">
+      <h2>Customer Charges</h2>
+    </header>
+    <p class="subtotal">
+      <span class="charges-label">Subtotal: $</span>
+      <span class="charges-value">0.00</span>
+    </p>
+    <p class="tip">
+      <span class="charges-label">Tip: $</span>
+      <span class="charges-value">0.00</span>
+    </p>
+    <p class="charges-total">
+      <span class="charges-label">Total: $</span>
+      <span class="charges-value">0.00</span>
+    </p>
   `;
 }
 
@@ -85,19 +83,22 @@ function generateEarningsInfo() {
 //
 
 function renderMealDetails() {
-  
+  $('.meal-box').html(generateMealDetails());
 }
 
 function renderCustomerCharges() {
-
+  $('.customer-charges-box').html(generateCustomerCharges());
 }
 
 function renderEarningsInfo() {
-
+  $('.earnings-box').html(generateEarningsInfo());
 }
 
 function render() {
+  console.log('render ran');
   renderMealDetails();
   renderCustomerCharges();
   renderEarningsInfo();
 };
+
+render();
